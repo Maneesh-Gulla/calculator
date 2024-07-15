@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="calculator.css" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <main>
+      <div class="calculator">
+        <div class="answer">
+          <p class="values ans"></p>
+          <p class="result ans"></p>
+        </div>
+        <div class="numbers">
+          <p
+            class="n"
+            onclick="
+          updateCalculation('1');">
+            1
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('2');
+        ">
+            2
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('3');
+        ">
+            3
+          </p>
+
+          <p
+            class="operations"
+            onclick="updateCalculation('+')
+          ">
+            +
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('4');
+        ">
+            4
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('5');
+        ">
+            5
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('6');
+        ">
+            6
+          </p>
+
+          <p
+            class="operations"
+            onclick="
+        updateCalculation('-')">
+            -
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('7');
+        ">
+            7
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('8');
+        ">
+            8
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('9');
+        ">
+            9
+          </p>
+
+          <p
+            class="operations"
+            onclick="
+        updateCalculation('*')">
+            *
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('0');
+        ">
+            0
+          </p>
+
+          <p
+            class="n"
+            onclick="
+        updateCalculation('.');
+        ">
+            .
+          </p>
+
+          <p
+            class="n"
+            onclick="
+          calculation=eval(calculation)
+        displayCalculation();
+        localStorage.setItem('calculation',calculation)
+
+        "
+            onkeydown="
+        if(key=='Enter'){
+          calculation=eval(calculation)
+          displayCalculation();
+        }">
+            =
+          </p>
+
+          <p
+            class="operations"
+            onclick="
+        updateCalculation('/')
+        ">
+            /
+          </p>
+
+          <p
+            class="n clear"
+            onclick="
+        calculation='';
+        displayCalculation();
+        localStorage.setItem('calculation',calculation)
+        ">
+            clear
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="calculator.js"></script>
+  </body>
+</html>
